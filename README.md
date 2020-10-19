@@ -1,79 +1,68 @@
 # King County Housing Price Prediction Model
 
-For many machine learning projects, the goal is to create a model that best predicts the target variable on unseen data. In order to develop a model, we have a general process, but there is a lot of flexibility within this process. Even when working with the same data, people can produce different models by engineering different features, or by selecting certain features to include in the models. **There is no one correct way to create a model**.
+## Respository Contents
+* `README.md`: public-facing text file that's previewed on github repository
+* `draft_process.ipynb`: scrap Jupyter notebook used to experiment with modeling process, using training data from `kc_house_data_train.csv`
+	* ***this may be moved to a folder later!***
+* `modeling_process.ipynb`: final Jupyter notebook with 'cleaned up' modeling process
+* `preedict_holdout.ipynb`: Jupyter notebook used to generate predictions using final model on testing data from `kc_house_data_houldout_features.csv`
+* `kc_house_data_train.csv`: CSV file with **training data**, pre-split from dataset of King County housing information
+* `kc_house_data_houldout_features.csv`: CSV file with **testing data**, pre-split from dataset of King County housing information
+* `housing_preds_sidney_kung`: final CSV file of housing price predictions on testing/holdout set
 
-For Phase 2, you will be creating a model that will **predict the prices of homes** sold in the Seattle, WA area. For this project there will be **3 deliverables**:
+## Overview
 
-- a Github repo for this project
-- a notebook showing your final modeling process
-- a CSV file of your predictions on the holdout set
-	- name this file `housing_preds_your_name.csv` (replacing `your_name` with your name) and send via Slack
+This project builds a model to predict how much someone will pay for a house in King County Seatle, Washington. Inital exploratory data analysis shows that **something**. Based on that discovery, the model used **these features** to determine house prices based on unseen data.
 
-## Holdout predictions
+## Data & Methods
 
-You will develop a model using `kc_house_data_train.csv`. Then you will use that model/process to predict on the `kc_house_data_holdout_features.csv`. 
+This model has been developed by using the traing set, `kc_house_data_train.csv`. It was then predicted on the `kc_house_data_holdout_features.csv`. The resulting dataframe has been saved as `housing_preds_sidney_kung.csv`.
 
-***Important note #1***: If you create a new feature with your training data, you will need to do the same thing with the test data before using the model to predict on the holdout data.  
+The overall data set contains information about houses that were sold in King County in Seattle, Washington during the last decade. Below is a description of the column names, to help gain a better understanding about what the data represents. 
 
-After using your model to predict the holdout data, you will submit those predictions as a `.csv` file to the instructional staff. We will score the submitted predictions using the RMSE of those predictions.
+| column name | description |
+|-|-|
+| **id** | unique ID for each home |
+| **date** | date the home was sold |
+| **price** | selling price of each home |
+| **bedrooms** | number of bedrooms |
+| **bathrooms** | number of bathrooms, where .5 accounts for a room with a toilet but no shower |
+| **sqft_living** | square footage of each home's interior living space |
+| **sqft_lot** | square footage of each home's land space |
+| **floors** | number of floors (levels) in house |
+| **waterfront** | dummy varibale for whether the home is overlooking the waterfront or not |
+| **view** | rating of home's view, on a scale of 0 to 4 |
+| **condition** | overall condition of each home, on a scale of 1 to 5 |
+| **grade** | overall grade given to each home, on a scale of 1 to 13, based on King County grading system. 1-3 falls short of buidling construction and design, 7 has an average level of construction and design, and 11-13 has a high quality level of construction and design |
+| **sqft_above** | square footage of the interior housing space, excluding basement |
+| **sqft_basement** | square footage of the basement |
+| **yr_built** | year that each home was built |
+| **yr_renovated** | year of each home's last renovation |
+| **zipcode** | zip code in which home is located |
+| **lat** | latitude coordinate |
+| **long** | longitude coordinate |
+| **sqft_living15** | square footage of interior housing living space for the nearest 15 neighbors |
+| **sqft_lot15** | square footage of the land lots of the nearest 15 neighbors |
 
-***Important note #2***: While we will score and rank each submission, your class rank will **not** have any direct impact on passing Phase 2. *The goal is to make sure you can actually produce predictions*.
 
-So as long as you successfully **complete the modeling process** and can **explain the work you did**, you will be able to pass.  
+## Results
+- ***insert results here***
+- put **visualizations** here
+- along with inerpretaions of final model
 
-## Final notebook
+## Conclusions
+- ***insert results here***
+- this section may not be necessary?
 
-Through the modeling process, you will try many different techniques (**feature engineering** and **feature selection**, for example) to try and create your best model. Some will work and some will not lead to a better model. Through your modeling process, you will identify what actions create the best model. After you have finalized your process, you must create a 'cleaned up' and annotated notebook that shows your process.
+## For More Information
 
-Your notebook must include the following:
+See the [full model process](https://github.com/sidneykung/Housing_Price_Model/blob/master/modeling_process.ipynb) in a Jupyter Notebook, named `modeling_process.ipynb`, located in this repository.
 
-- **Exploratory Data Analysis (EDA):** You must create **at least 4 data visualizations** that help to explain the data. These visualizations should help someone unfamiliar with the data understand the target variable and the features that help explain that target variable.
+For additional info, contact Sidney Kung at sidneyjkung@gmail.com
 
-- **Feature Engineering:** You must create **at least 3 new features** to test in your model. Those features do not have to make it into your final model, as they might be removed during the feature selection process. That is expected, but you still need to explain the features you engineer and your thought process behind why you thought they would explain the selling price of the house.  
-
-- **Statistical Tests:** Your notebook must show **at least 3 statistical tests** that you preformed on your data set. Think of these as being part of your EDA process; for example, if you think houses with a view cost more than those without a view, then perform a two-sample T-test. These can be preliminary evidence that a feature will be important in your model.  
-
-- **Feature Selection:** There are many ways to do feature selection: filter methods, P-values, or recursive feature elimination (RFE). You should try multiple different techniques and combinations of them. For your final model, you will **settle on a process of feature selection**; this process should be **clearly shown in your final notebook**.
-
-- **Model Interpretation:** One of the benefits of a linear regression model is that you can **interpret the coefficients** of the model **to derive insights**. For example, which feature has the biggest impact on the price of the house? Was there a feature that you thought would be significant but was not? Think if you were a real estate agent helping clients price their house: what information would you find most helpful from this model?
-
-## GitHub Repository
-
-A GitHub repo is a good way to keep track of your work, but also to display the work you did to future employers. Your GitHub should contain the following:
-
-- A `README.md` that briefly describes the project and the files within the repo.
-- Your cleaned and annotated notebook showing your work.
-- A folder with all of your 'working' notebooks where you played around with your data and the modeling process.
-
-## Data Set Information
-
-This data set contains information about houses that were sold in the Seattle area during the last decade. Below is a description of the column names, to help you understand what the data represents. As with most real world data sets, the column names are not perfectly described, so you'll have to do some research or use your best judgment if you have questions relating to what the data means. 
-
-Like every data set, there are some irregularities and quirks. Trust me, there wasn't a house sold with 33 bedrooms, even though the data says there was. *You have to decide how you want to handle that example*. Also, some houses were sold more than once within the time frame of this dataset. Think about how that can be useful information in predicting the selling price.
-
-As you go through this modeling process, think about what determines how much someone will pay for a house.  For example, the larger the house is, the more people will pay for it. If you understand why certain houses cost more than others and represent that in your model, it will be a more accurate model.  
-
-Have fun!
-
-# Column Names and descriptions for King County Data Set
-* **id** - unique ID for a house
-* **date** - Date day house was sold
-* **price** - Price is prediction target
-* **bedrooms** - Number of bedrooms
-* **bathrooms** - Number of bathrooms
-* **sqft_living** - square footage of the home
-* **sqft_lot** - square footage of the lot
-* **floors** - Total floors (levels) in house
-* **waterfront** - Whether house has a view to a waterfront
-* **view** - Number of times house has been viewed
-* **condition** - How good the condition is (overall)
-* **grade** - overall grade given to the housing unit, based on King County grading system
-* **sqft_above** - square footage of house (apart from basement)
-* **sqft_basement** - square footage of the basement
-* **yr_built** - Year when house was built
-* **yr_renovated** - Year when house was renovated
-* **zipcode** - zip code in which house is located
-* **lat** - Latitude coordinate
-* **long** - Longitude coordinate
-* **sqft_living15** - The square footage of interior housing living space for the nearest 15 neighbors
-* **sqft_lot15** - The square footage of the land lots of the nearest 15 neighbors
+## misc:
+text formatting:
+- `grey box`
+- [link_name](link_url)
+- **bold**
+- ***italics***
