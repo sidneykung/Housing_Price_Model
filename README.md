@@ -14,7 +14,7 @@
 
 ## Overview
 
-This project builds a model to predict how much someone will pay for a house in King County Seatle, Washington. Inital exploratory data analysis shows that **something**. Based on that discovery, the model used **these features** to determine house prices based on unseen data.
+This project builds a model to predict how much someone will pay for a house in King County Seatle, Washington. Inital exploratory data analysis shows that [something]. Based on that discovery, the model used [these initial features] to determine house prices based on unseen data. After [number] iterations, the final model has an R-Squared of [number] and RMSE of [number]. The final model's predictions on the holdout set can be found in [housing_preds_sidney_kung.csv]
 
 ## Data & Methods
 
