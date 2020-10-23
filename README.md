@@ -13,21 +13,21 @@
 
 ## Overview
 
-This project builds a model to predict how much someone will pay for a house in King County Seatle, Washington. Inital exploratory data analysis shows the higher the interior sqft, the higher the selling price. Also, the least profitable on average in February. It's the most profitable to sell a house in April to June. Additionally, the proprty size does not determine whether a house sells for higher.
+This project builds a model to predict how much someone will pay for a house in King County Seatle, Washington. Inital exploratory data analysis shows the higher the interior sqft, the higher the selling price. Also, the total proprty size does not determine whether a house sells for higher. Finally, the least profitable month to see a house on average is February. It's actually the most profitable in April to June. 
 
-Based on that discovery, the model included those features to determine house prices based on unseen data. Each iteration of the model used feature selection to determine which model predict most accurately. After three iterations, the final model has an RMSE of 217278.50713, when predicting on testing data that was split from `kc_house_data_train.csv'. The final model's predictions on the holdout set can be found in housing_preds_sidney_kung.csv.
+Based on that discovery, the model included those features to determine house prices based on unseen data. Each iteration of the model used feature selection to determine which model predicted most accurately. After three iterations, the final model has an **RMSE of 217278.50713, when predicting on testing data** that was split from `kc_house_data_train.csv'. The final model's predictions on the holdout set can be found in housing_preds_sidney_kung.csv.
 
 ## Business Questions
 Before building the model, I investigated three main questions through exploratory data analysis.
 1. Do houses sell for more money when they have more interior sqft space?
-2. On average, what is the most profitable month to sell a house?
-3. Do houses with higher proprty size sell for more?
+2. Do houses with higher total property size sell for more?
+3. On average, what is the most profitable month to sell a house?
 
 ## Data & Methods
 
-This model has been developed by using the traing set, `kc_house_data_train.csv`. It was then predicted on the `kc_house_data_holdout_features.csv`. The resulting dataframe has been saved as `housing_preds_sidney_kung.csv`.
+This model has been developed by using the training set, `kc_house_data_train.csv`. It was then predicted on the `kc_house_data_holdout_features.csv`. The resulting dataframe with price predictions has been saved as `housing_preds_sidney_kung.csv`.
 
-The overall data set contains information about houses that were sold in King County in Seattle, Washington during the last decade. Below is a description of the column names, to help gain a better understanding about what the data represents. 
+The overall data set contains information about **houses that were sold in King County Seattle, Washington during the last decade**. Below is a description of the column names, to help gain a better understanding about what the raw data represents. 
 
 | column name | description |
 |-|-|
@@ -60,14 +60,14 @@ During the exploratory data analysis phase, I discovered that the 'sqft_living' 
 
 ![sqft_living](./visualizations/sqft_living.png)
 
-Additioanlly, by looking at the average price per month, it's clear that the least profitable month on average is February. Meanwhile, it's the most profitable to sell a house in April to June.
 
-![month_sold](./visualizations/month_sold.png)
-
-
-Finally, it was discovered that the entire property size does not determine whether a house sells for higher
+Additionally, it was discovered that the total property size does not determine whether a house sells for higher
 
 ![entire_property](./visualizations/entire_property.png)
+
+Finally, by looking at the average price per month, it's clear that the least profitable month on average is February. Meanwhile, it's the most profitable to sell a house in April to June.
+
+![month_sold](./visualizations/month_sold.png)
 
 ## Final Model Performance
 
