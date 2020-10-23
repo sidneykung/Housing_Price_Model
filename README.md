@@ -6,11 +6,12 @@
 * `draft_process.ipynb`: scrap Jupyter notebook used to experiment with modeling process, using training data from `kc_house_data_train.csv`
 	* ***this may be moved to a folder later***
 * `final_modeling_process.ipynb`: final Jupyter notebook with 'cleaned up' modeling process
+* `model.pickle`: pickle file with final model
 * `predict_holdout.ipynb`: Jupyter notebook used to generate predictions using final model on testing data from `kc_house_data_houldout_features.csv`
 * `kc_house_data_train.csv`: CSV file with **training data**, pre-split from dataset of King County housing information
 * `kc_house_data_houldout_features.csv`: CSV file with **testing data**, pre-split from dataset of King County housing information
 * `housing_preds_sidney_kung`: final CSV file of housing price predictions on testing/holdout set
-* `images`: folder with visualizations used in README.md
+* `visualizations`: folder with visualizations used in README.md
 
 ## Overview
 
