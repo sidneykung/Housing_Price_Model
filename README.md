@@ -58,7 +58,7 @@ The overall data set contains information about houses that were sold in King Co
 
 During the exploratory data analysis phase, I discovered that the 'sqft_living' and 'price' have a highly positive correlation. Therefore, the higher the interior sqft, the higher the selling price.
 
-![sqft_living](./visualizations/sqft_living_gross.png)
+![sqft_living](./visualizations/sqft_living.png)
 
 Additioanlly, by looking at the average price per month, it's clear that the least profitable month on average is February. Meanwhile, it's the most profitable to sell a house in April to June.
 
