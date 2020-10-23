@@ -1,16 +1,15 @@
 # Housing Price Prediction Model
 
 ## Respository Contents
-***reorder this later at final stage***
+* `visualizations`: folder with graphs used in README.md
+* `predict_holdout.ipynb`: Jupyter notebook used to generate predictions using final model on testing data from `kc_house_data_houldout_features.csv`
 * `README.md`: public-facing text file that's previewed on github repository
 * `draft_process.ipynb`: scrap Jupyter notebook used to experiment with modeling process, using training data from `kc_house_data_train.csv`
-* `final_modeling_process.ipynb`: final Jupyter notebook with 'cleaned up' modeling process
-* `model.pickle`: pickle file with final model
-* `predict_holdout.ipynb`: Jupyter notebook used to generate predictions using final model on testing data from `kc_house_data_houldout_features.csv`
-* `kc_house_data_train.csv`: CSV file with **training data**, pre-split from dataset of King County housing information
+* `final_model_process.ipynb`: **final Jupyter notebook** with 'cleaned up' modeling process, to be submitted for review
+* `housing_preds_sidney_kung`: final CSV file of housing price predictions on holdout set
 * `kc_house_data_houldout_features.csv`: CSV file with **testing data**, pre-split from dataset of King County housing information
-* `housing_preds_sidney_kung`: final CSV file of housing price predictions on testing/holdout set
-* `visualizations`: folder with visualizations used in README.md
+* `kc_house_data_train.csv`: CSV file with **holdout data**, pre-split from dataset of King County housing information
+* `model.pickle`: pickle file with final model
 
 ## Overview
 
@@ -59,7 +58,7 @@ The overall data set contains information about houses that were sold in King Co
 
 During the exploratory data analysis phase, I discovered that the 'sqft_living' and 'price' have a highly positive correlation. Therefore, the higher the interior sqft, the higher the selling price.
 
-![sqft_living](./visualizations/avgsqft_living_gross.png)
+![sqft_living](./visualizations/sqft_living_gross.png)
 
 Additioanlly, by looking at the average price per month, it's clear that the least profitable month on average is February. Meanwhile, it's the most profitable to sell a house in April to June.
 
@@ -77,6 +76,6 @@ After three iterations, the final model was able to generate an RMSE of 217282.3
 
 ## For More Information
 
-See the [full model process](https://github.com/sidneykung/Housing_Price_Model/blob/master/modeling_process.ipynb) in a Jupyter Notebook, named `final_modeling_process.ipynb`, located in this repository.
+See the [full model process](https://github.com/sidneykung/Housing_Price_Model/blob/master/modeling_process.ipynb) in a Jupyter Notebook, named `final_model_process.ipynb`, located in this repository.
 
 For additional info, contact Sidney Kung at sidneyjkung@gmail.com
