@@ -4,7 +4,6 @@
 ***reorder this later at final stage***
 * `README.md`: public-facing text file that's previewed on github repository
 * `draft_process.ipynb`: scrap Jupyter notebook used to experiment with modeling process, using training data from `kc_house_data_train.csv`
-	* ***this may be moved to a folder later***
 * `final_modeling_process.ipynb`: final Jupyter notebook with 'cleaned up' modeling process
 * `model.pickle`: pickle file with final model
 * `predict_holdout.ipynb`: Jupyter notebook used to generate predictions using final model on testing data from `kc_house_data_houldout_features.csv`
@@ -15,7 +14,15 @@
 
 ## Overview
 
-This project builds a model to predict how much someone will pay for a house in King County Seatle, Washington. Inital exploratory data analysis shows that [something]. Based on that discovery, the model used [these initial features] to determine house prices based on unseen data. After [number] iterations, the final model has an R-Squared of [number] and RMSE of [number]. The final model's predictions on the holdout set can be found in [housing_preds_sidney_kung.csv]
+This project builds a model to predict how much someone will pay for a house in King County Seatle, Washington. Inital exploratory data analysis shows the higher the interior sqft, the higher the selling price. Also, the least profitable on average in February. It's the most profitable to sell a house in April to June. Additionally, the proprty size does not determine whether a house sells for higher.
+
+Based on that discovery, the model included those features to determine house prices based on unseen data. Each iteration of the model used feature selection to determine which model predict most accurately. After three iterations, the final model has an RMSE of 217282.329, when predicting on testing data that was split from `kc_house_data_train.csv'. The final model's predictions on the holdout set can be found in housing_preds_sidney_kung.csv.
+
+## Business Questions
+Before building the model, I investigated three main questions through exploratory data analysis.
+1. Do houses sell for more money when they have more interior sqft space?
+2. On average, what is the most profitable month to sell a house?
+3. Do houses with higher proprty size sell for more?
 
 ## Data & Methods
 
@@ -49,13 +56,24 @@ The overall data set contains information about houses that were sold in King Co
 
 
 ## Results
-- ***insert results here***
-- put **visualizations** here
-- along with inerpretaions of final model
 
-## Conclusions
-- ***insert results here***
-- this section may not be necessary?
+During the exploratory data analysis phase, I discovered that the 'sqft_living' and 'price' have a highly positive correlation. Therefore, the higher the interior sqft, the higher the selling price.
+
+![sqft_living](./visualizations/avgsqft_living_gross.png)
+
+Additioanlly, by looking at the average price per month, it's clear that the least profitable month on average is February. Meanwhile, it's the most profitable to sell a house in April to June.
+
+![month_sold](./visualizations/month_sold.png)
+
+
+Finally, it was discovered that the entire property size does not determine whether a house sells for higher
+
+![entire_property](./visualizations/entire_property.png)
+
+## Final Model Performance
+
+After three iterations, the final model was able to generate an RMSE of 217282.329 when predicting on testing data that was split from `kc_house_data_train.csv'. Although this RMSE is not ideally low enough, it's a great start for my first attempt at machine leanring modeling. My last iteration out of the three ended up being the best. The final model's predictions on the blind holdout set can be found in housing_preds_sidney_kung.csv.
+
 
 ## For More Information
 
