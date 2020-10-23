@@ -76,6 +76,6 @@ After three iterations, the final model was able to generate an RMSE of 217282.3
 
 ## For More Information
 
-See the [full model process](https://github.com/sidneykung/Housing_Price_Model/blob/master/modeling_process.ipynb) in a Jupyter Notebook, named `final_model_process.ipynb`, located in this repository.
+See the [full model process](https://github.com/sidneykung/Housing_Price_Model/blob/main/final_model_process.ipynb) in a Jupyter Notebook, named `final_model_process.ipynb`, located in this repository.
 
 For additional info, contact Sidney Kung at sidneyjkung@gmail.com
