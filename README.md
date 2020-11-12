@@ -1,4 +1,5 @@
 # Housing Price Prediction Model
+**Please note that this repository is incomplete and requires revision.**
 
 ## Respository Contents
 * `visualizations`: folder with graphs used in README.md
