@@ -1,5 +1,7 @@
 # Housing Price Prediction
-```Please note that this repository is incomplete and requires revision.```
+```diff
+Please note that this repository is incomplete and requires revision.
+```
 
 ## Respository Contents
 * `visualizations`: folder with graphs used in README.md
