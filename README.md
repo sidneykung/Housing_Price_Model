@@ -1,4 +1,4 @@
-# Housing Price Prediction Model
+# Housing Price Prediction
 **Please note that this repository is incomplete and requires revision.**
 
 ## Respository Contents
