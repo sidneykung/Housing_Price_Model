@@ -3,20 +3,9 @@
 Please note that this repository is incomplete and requires revision.
 ```
 
-## Respository Contents
-* `visualizations`: folder with graphs used in README.md
-* `predict_holdout.ipynb`: Jupyter notebook used to generate predictions using final model on testing data from `kc_house_data_houldout_features.csv`
-* `README.md`: public-facing text file that's previewed on github repository
-* `draft_process.ipynb`: scrap Jupyter notebook used to experiment with modeling process, using training data from `kc_house_data_train.csv`
-* `final_model_process.ipynb`: **final Jupyter notebook** with 'cleaned up' modeling process, to be submitted for review
-* `housing_preds_sidney_kung`: final CSV file of housing price predictions on holdout set
-* `kc_house_data_houldout_features.csv`: CSV file with **testing data**, pre-split from dataset of King County housing information
-* `kc_house_data_train.csv`: CSV file with **holdout data**, pre-split from dataset of King County housing information
-* `model.pickle`: pickle file with final model
-
 ## Overview
 
-This project builds a model to predict how much someone will pay for a house in King County Seatle, Washington. Inital exploratory data analysis shows the higher the interior sqft, the higher the selling price. Also, the total proprty size does not determine whether a house sells for higher. Finally, the least profitable month to see a house on average is February. It's actually the most profitable in April to June. 
+This project builds a model to predict how much someone will pay for a house in King County Seattle, Washington. Initial exploratory data analysis shows the higher the interior sqft, the higher the selling price. Also, the total property size does not determine whether a house sells for higher. Finally, the least profitable month to see a house on average is February. It's actually the most profitable in April to June. 
 
 Based on that discovery, the model included those features to determine house prices based on unseen data. Each iteration of the model used feature selection to determine which model predicted most accurately. After three iterations, the final model has an **RMSE of 214529.8727, when predicting on testing data** that was split from `kc_house_data_train.csv'. The final model's predictions on the holdout set can be found in housing_preds_sidney_kung.csv.
 
@@ -45,7 +34,7 @@ The overall data set contains information about **houses that were sold in King 
 | **waterfront** | dummy varibale for whether the home is overlooking the waterfront or not |
 | **view** | rating of home's view, on a scale of 0 to 4 |
 | **condition** | overall condition of each home, on a scale of 1 to 5 |
-| **grade** | overall grade given to each home, on a scale of 1 to 13, based on King County grading system. 1-3 falls short of buidling construction and design, 7 has an average level of construction and design, and 11-13 has a high quality level of construction and design |
+| **grade** | overall grade given to each home, on a scale of 1 to 13, based on King County grading system. 1-3 falls short of building construction and design, 7 has an average level of construction and design, and 11-13 has a high quality level of construction and design |
 | **sqft_above** | square footage of the interior housing space, excluding basement |
 | **sqft_basement** | square footage of the basement |
 | **yr_built** | year that each home was built |
@@ -76,6 +65,16 @@ Finally, by looking at the average price per month, it's clear that the least pr
 
 After three iterations, the final model was able to generate an RMSE of 214529.8727 when predicting on testing data that was split from `kc_house_data_train.csv'. Although this RMSE is not ideally low enough, it's a great start for my first attempt at machine leanring modeling. My first iteration out of the three ended up being the best. The final model's predictions on the blind holdout set can be found in housing_preds_sidney_kung.csv.
 
+## Respository Contents
+* `visualizations`: folder with graphs used in README.md
+* `predict_holdout.ipynb`: Jupyter notebook used to generate predictions using final model on testing data from `kc_house_data_houldout_features.csv`
+* `README.md`: public-facing text file that's previewed on github repository
+* `draft_process.ipynb`: scrap Jupyter notebook used to experiment with modeling process, using training data from `kc_house_data_train.csv`
+* `final_model_process.ipynb`: **final Jupyter notebook** with 'cleaned up' modeling process, to be submitted for review
+* `housing_preds_sidney_kung`: final CSV file of housing price predictions on holdout set
+* `kc_house_data_houldout_features.csv`: CSV file with **testing data**, pre-split from dataset of King County housing information
+* `kc_house_data_train.csv`: CSV file with **holdout data**, pre-split from dataset of King County housing information
+* `model.pickle`: pickle file with final model
 
 ## For More Information
 
