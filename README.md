@@ -3,6 +3,8 @@
 Please note that this repository is incomplete and requires revision.
 ```
 
+![banner](./visualizations/banner.jpg)
+
 ## Overview
 
 This project builds a model to predict how much someone will pay for a house in King County Seattle, Washington. Initial exploratory data analysis shows the higher the interior sqft, the higher the selling price. Also, the total property size does not determine whether a house sells for higher. Finally, the least profitable month to see a house on average is February. It's actually the most profitable in April to June. 
@@ -66,15 +68,19 @@ Finally, by looking at the average price per month, it's clear that the least pr
 After three iterations, the final model was able to generate an RMSE of 214529.8727 when predicting on testing data that was split from `kc_house_data_train.csv'. Although this RMSE is not ideally low enough, it's a great start for my first attempt at machine leanring modeling. My first iteration out of the three ended up being the best. The final model's predictions on the blind holdout set can be found in housing_preds_sidney_kung.csv.
 
 ## Respository Contents
-* `visualizations`: folder with graphs used in README.md
-* `predict_holdout.ipynb`: Jupyter notebook used to generate predictions using final model on testing data from `kc_house_data_houldout_features.csv`
-* `README.md`: public-facing text file that's previewed on github repository
-* `draft_process.ipynb`: scrap Jupyter notebook used to experiment with modeling process, using training data from `kc_house_data_train.csv`
-* `final_model_process.ipynb`: **final Jupyter notebook** with 'cleaned up' modeling process, to be submitted for review
-* `housing_preds_sidney_kung`: final CSV file of housing price predictions on holdout set
-* `kc_house_data_houldout_features.csv`: CSV file with **testing data**, pre-split from dataset of King County housing information
-* `kc_house_data_train.csv`: CSV file with **holdout data**, pre-split from dataset of King County housing information
-* `model.pickle`: pickle file with final model
+
+```bash
+.
+├── notebooks                       # contains modeling notebooks
+│   └── predict_holdout.csv         # generating predictions using final model
+├── pickle                          # contains final model
+├── src                             # source folder
+│   └── kc_house_data_train.csv     # pre-split raw dataset
+├── visualizations                  # contains graphs and images
+├── README.md                       # public-facing preview
+└── final_model_process.ipynb       # final version of EDA, feature engineering and modeling process
+
+```
 
 ## For More Information
 
