@@ -1,25 +1,22 @@
 # Housing Price Prediction
-```diff
-Please note that this repository is incomplete and requires revision.
-```
 
 ![banner](./visualizations/banner.jpg)
 
 ## Overview
 
-This project builds a model to predict how much someone will pay for a house in King County Seattle, Washington. Initial exploratory data analysis shows the higher the interior sqft, the higher the selling price. Also, the total property size does not determine whether a house sells for higher. Finally, the least profitable month to see a house on average is February. It's actually the most profitable in April to June. 
+This project builds a linear regression model to predict how much someone will pay for a house in King County Seattle, Washington. Initial exploratory data analysis shows the higher the interior sqft, the higher the selling price. Also, the total property size does not determine whether a house sells for higher. Finally, the least profitable month to see a house on average is February. It's actually the most profitable in April to June. 
 
-Based on that discovery, the model included those features to determine house prices based on unseen data. Each iteration of the model used feature selection to determine which model predicted most accurately. After three iterations, the final model has an **RMSE of 214529.8727, when predicting on testing data** that was split from `kc_house_data_train.csv'. The final model's predictions on the holdout set can be found in housing_preds_sidney_kung.csv.
+Based on that discovery, the model included those features to determine house prices based on unseen data. Each iteration of the model used feature selection to determine which model predicted most accurately. After three iterations, the final model has an **RMSE of 214529.8727, when predicting on testing data** that was split from `kc_house_data_train.csv'. The final model's predictions on the holdout set can be found in housing_predictions.csv.
 
 ## Business Questions
-Before building the model, I investigated three main questions through exploratory data analysis.
+Before building the model, three main questions were investigated through exploratory data analysis.
 1. Do houses sell for more money when they have more interior sqft space?
 2. Do houses with higher total property size sell for more?
 3. On average, what is the most profitable month to sell a house?
 
 ## Data & Methods
 
-This model has been developed by using the training set, `kc_house_data_train.csv`. It was then predicted on the `kc_house_data_holdout_features.csv`. The resulting dataframe with price predictions has been saved as `housing_preds_sidney_kung.csv`.
+This model has been developed by using the training set, `kc_house_data_train.csv`. It was then predicted on the `kc_house_data_holdout_features.csv`. The resulting dataframe with price predictions has been saved as `housing_predictions.csv`.
 
 The overall data set contains information about **houses that were sold in King County Seattle, Washington during the last decade**. Below is a description of the column names, to help gain a better understanding about what the raw data represents. 
 
@@ -65,9 +62,15 @@ Finally, by looking at the average price per month, it's clear that the least pr
 
 ## Final Model Performance
 
-After three iterations, the final model was able to generate an RMSE of 214529.8727 when predicting on testing data that was split from `kc_house_data_train.csv'. Although this RMSE is not ideally low enough, it's a great start for my first attempt at machine leanring modeling. My first iteration out of the three ended up being the best. The final model's predictions on the blind holdout set can be found in housing_preds_sidney_kung.csv.
+After three iterations, the final Linear Regression model was able to generate an RMSE of 214529.8727 when predicting on testing data that was split from `kc_house_data_train.csv'. The final model's predictions on the blind holdout set can be found in housing_predictions.csv.
 
-## Respository Contents
+## Next Steps
+
+- Feature engineering with polynomials, log transformations and interactions
+- Feature selection with recursive feature elimination (RFE) and other techniques
+- Generalize improved final model on holdout set
+
+## Repository Contents
 
 ```bash
 .
@@ -83,7 +86,11 @@ After three iterations, the final model was able to generate an RMSE of 214529.8
 ```
 
 ## For More Information
+- See the [full project overview](https://github.com/sidneykung/Housing_Price_Model/blob/main/final_model_process.ipynb) in the `final_notebook.ipynb` Jupyter Notebook.
+- For additional information or suggestions, contact Sidney Kung at [sidneyjkung@gmail.com](mailto:sidneyjkung@gmail.com)
 
-See the [full model process](https://github.com/sidneykung/Housing_Price_Model/blob/main/final_model_process.ipynb) in a Jupyter Notebook, named `final_model_process.ipynb`, located in this repository.
+**Let's connect!**
 
-For additional info, contact Sidney Kung at sidneyjkung@gmail.com
+- [LinkedIn](https://www.linkedin.com/in/sidneykung/)
+
+- [Twitter](https://twitter.com/sidney_k98)
