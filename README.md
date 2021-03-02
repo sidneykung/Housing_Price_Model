@@ -6,7 +6,7 @@
 
 This project builds a linear regression model to predict how much someone will pay for a house in King County Seattle, Washington. Initial exploratory data analysis shows the higher the interior sqft, the higher the selling price. Also, the total property size does not determine whether a house sells for higher. Finally, the least profitable month to see a house on average is February. It's actually the most profitable in April to June. 
 
-Based on that discovery, the model included those features to determine house prices based on unseen data. Each iteration of the model used feature selection to determine which model predicted most accurately. After three iterations, the final model has an **RMSE of 214529.8727, when predicting on testing data** that was split from `kc_house_data_train.csv'. The final model's predictions on the holdout set can be found in housing_predictions.csv.
+Based on that discovery, the model included those features to determine house prices based on unseen data. Each iteration of the model used feature selection to determine which model predicted most accurately. After three iterations, the final model has an **RMSE of 214529.8727, when predicting on testing data** that was split from `kc_house_data_train.csv'. The final model's predictions on the holdout set can be found in `housing_predictions.csv`.
 
 ## Business Questions
 Before building the model, three main questions were investigated through exploratory data analysis.
@@ -47,12 +47,12 @@ The overall data set contains information about **houses that were sold in King 
 
 ## Results
 
-During the exploratory data analysis phase, I discovered that the 'sqft_living' and 'price' have a highly positive correlation. Therefore, the higher the interior sqft, the higher the selling price.
+During the exploratory data analysis phase, I discovered that the `sqft_living` and `price` have a highly positive correlation. Therefore, the higher the interior sqft, the higher the selling price.
 
 ![sqft_living](./visualizations/sqft_living.png)
 
 
-Additionally, it was discovered that the total property size does not determine whether a house sells for higher
+Additionally, it was discovered that the total property size does not determine whether a house sells for higher.
 
 ![entire_property](./visualizations/entire_property.png)
 
@@ -62,7 +62,7 @@ Finally, by looking at the average price per month, it's clear that the least pr
 
 ## Final Model Performance
 
-After three iterations, the final Linear Regression model was able to generate an RMSE of 214529.8727 when predicting on testing data that was split from `kc_house_data_train.csv'. The final model's predictions on the blind holdout set can be found in housing_predictions.csv.
+After three iterations, the final Linear Regression model was able to generate an RMSE of 214529.8727 when predicting on testing data that was split from `kc_house_data_train.csv`. The final model's predictions on the blind holdout set can be found in `housing_predictions.csv`.
 
 ## Next Steps
 
