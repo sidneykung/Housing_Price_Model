@@ -52,7 +52,7 @@ During the exploratory data analysis phase, I discovered that the `sqft_living` 
 ![sqft_living](./visualizations/sqft_living.png)
 
 
-Additionally, it was discovered that the total property size does not determine whether a house sells for higher.
+Additionally, it was discovered that the total property size does not determine whether a house sells for higher due to this weak positive correlation.
 
 ![entire_property](./visualizations/entire_property.png)
 
